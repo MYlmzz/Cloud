@@ -1,0 +1,11 @@
+@EndUserText.label: 'Travel BO PW Erişim Engeli'
+@MappingRole: true
+define role ZMY_RAP_AC_02 {
+    grant
+        select
+            on
+                ZMY_RAP_C_DEMO_01T
+                    where
+                        inheriting conditions from entity ZMY_RAP_DD_DEMO_01;
+                        
+}

@@ -1,0 +1,13 @@
+@EndUserText.label: 'Travel Erişim Kontrol'
+@MappingRole: true
+define role ZMY_RAP_AC_01 {
+    grant
+        select
+            on
+                ZMY_RAP_DD_DEMO_01
+                    where
+//                        CurrencyCode = 'USD';
+//                        ( TravelStatus ) 
+//                        = aspect pfcg_auth (  ZMY_RAP_01,ZMY_RAP_01,ACTVT = '01' );
+                        TRUE;
+}
