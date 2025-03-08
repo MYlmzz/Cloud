@@ -1,0 +1,46 @@
+@Metadata.layer: #CORE
+
+@UI: {
+   headerInfo: { typeName: 'Course' ,
+                 typeNamePlural : 'Courses' ,
+                 title: { type : #STANDARD, value: 'CourseId' }}   
+}
+annotate view ZMY_CLOUD_DD_03
+    with 
+{
+   @UI.facet: [{ id: 'Course',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'Course Details',
+                 position:10  },
+                 { id: 'Schedule',
+                 purpose: #STANDARD,
+                 type: #LINEITEM_REFERENCE,
+                 label: 'Schedule List',
+                 position:20,
+                 targetElement: '_Schedule' }]
+   
+        @UI.hidden: true
+        CourseUuid;
+        
+        @UI:{ lineItem:       [{ position: 10, label: 'Course ID' }],
+              identification: [{ position: 10, label: 'Course ID' }],
+              selectionField: [{ position: 10 }]}
+        CourseId;
+        @UI:{ lineItem:       [{ position: 20, label: 'Course Name' }],
+              identification: [{ position: 20, label: 'Course Name' }],
+              selectionField: [{ position: 20 }]}
+        CourseName;
+         @UI:{ lineItem:      [{ position: 30, label: 'Length' }],
+              identification: [{ position: 30, label: 'Length' }]}
+        CourseLength;
+         @UI:{ lineItem:       [{ position: 40, label: 'Length' }], 
+               identification: [{ position: 40, label: 'Price' }]}
+        Price;
+        @UI:{ identification: [{ position: 50, label: 'Last Changed' }] }
+        LastChangedAt;
+        @UI.hidden: true
+        LocalLastChangedAt;
+    
+}
+ 

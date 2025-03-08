@@ -1,0 +1,5 @@
+@EndUserText.label: 'Course Servis Definition'
+define service ZMY_CLOUD_SD_01 {
+  expose ZMY_CLOUD_DD_01 as Course;
+  expose ZMY_CLOUD_DD_02 as Schedule;
+}
